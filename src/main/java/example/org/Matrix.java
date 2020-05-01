@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Matrix {
 
     public static double[][] multiply(double[][] firstMatrix, double[][] secondMatrix) {
+        if (firstMatrix.length != secondMatrix[0].length) throw new IllegalArgumentException();
 
         double[][] result = new double[firstMatrix.length][secondMatrix[0].length];
 
